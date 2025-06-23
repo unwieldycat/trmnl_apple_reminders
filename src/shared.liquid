@@ -1,0 +1,33 @@
+{% assign dummy1 = webhook_url %}
+{% assign dummy2 = shortcut_url %}
+
+{% template rlist %}
+{% for r in reminders %}
+<div class="item">
+  <div class="meta">
+    <span class="index">{{ r.idx }}</span>
+  </div>
+  <div class="content">
+    <span class="title title--small">{{ r.title }}</span>
+    {% if show_description %}
+    <span class="description">{{r.description | truncate: 36}}</span>
+    {% endif %}
+    <div class="flex gap--small">
+      {% if r.date != "" %}
+      <span class="label label--small label--underline">{{r.date}}</span>
+      {% endif %}
+      {% if r.num_tasks > 0 %}
+      {% assign label = r.num_tasks == 1 | default: false %}
+      <span class="label label--small label--underline">
+        {{ r.num_tasks }} {% if r.num_tasks == 1 %}Subtask{% else %}Subtasks{% endif %}
+      </span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% if reminders.size == 0 %}
+<span class="title title--small">You're all caught up!</span>
+<span class="description">You have no upcoming reminders.</span>
+{% endif %}
+{% endtemplate %}

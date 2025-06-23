@@ -1,0 +1,60 @@
+# TRMNLP configuration
+# {{ env.VARIABLE }} interpolation is available here
+---
+# auto-reload when files change (`watch: false` to disable)
+watch:
+  - .trmnlp.yml
+  - src
+
+# values of custom fields (defined in src/settings.yml)
+custom_fields: {}
+
+# override variables
+variables:
+  trmnl: {}
+  reminders:
+    - idx: 1
+      date: ""
+      title: TRMNL Reminders Recipe
+      num_tasks: 0
+      description: These are just example tasks
+    - idx: 2
+      date: ""
+      title: Buy another TRMNL
+      num_tasks: 0
+      description: "for unlimited focus, of course"
+    - idx: 3
+      date: ""
+      title: Protest outside Apple Park
+      num_tasks: 0
+      description: Shortcuts is excruciating to use
+    - idx: 4
+      date: "Today, 16:00"
+      title: Grab items from the store
+      num_tasks: 4
+      description: ""
+    - idx: 5
+      date: "Tomorrow, 12:00"
+      title: Walk the cat
+      num_tasks: 0
+      description: ""
+    - idx: 6
+      date: "6/21/25, 00:00"
+      title: Water the plants
+      num_tasks: 0
+      description: ""
+    - idx: 7
+      date: "6/21/25, 00:00"
+      title: Wash the car
+      num_tasks: 0
+      description: ""
+    - idx: 8
+      date: "6/29/25, 00:00"
+      title: Pay bills
+      num_tasks: 0
+      description: ""
+    - idx: 9
+      date: "7/14/25, 00:00"
+      title: Prepare for conference
+      num_tasks: 0
+      description: Review slide deck and key points
