@@ -8,20 +8,20 @@ polling_url: ''
 polling_headers: ''
 id: 79716
 custom_fields:
-- keyname: doesnt_matter
-  name: About This Plugin
-  field_type: author_bio
-  description: Sync your Apple Reminders to your TRMNL through Shortcuts.
-  github_url: https://github.com/unwieldycat
-- keyname: webhook_url
-  field_type: copyable_webhook_url
-  name: Webhook URL
-  description: Paste this into your Apple Shortcut
-  help_text: This will populate once the plugin has been created/saved.
-- keyname: shortcut_url
-  field_type: copyable
-  name: Shortcut URL
-  value: https://www.icloud.com/shortcuts/3e31e647e2bb45cfb5113ed9cf69c701
-  description: Add this shortcut to your Apple device. Read the comments to configure.
+ - keyname: doesnt_matter
+   name: About This Plugin
+   field_type: author_bio
+   description: Sync your Apple Reminders to your TRMNL through Shortcuts.
+   github_url: https://github.com/unwieldycat/trmnl_apple_reminders
+ - keyname: webhook_url
+   field_type: copyable_webhook_url
+   name: Webhook URL
+   description: Paste this into your Apple Shortcut
+   help_text: This will populate once the plugin has been created/saved.
+ - keyname: shortcut_url
+   field_type: copyable
+   name: Shortcut URL
+   value: https://www.icloud.com/shortcuts/3e31e647e2bb45cfb5113ed9cf69c701
+   description: Add this shortcut to your Apple device. Read the comments to configure.
 name: Apple Shortcuts Reminders
 refresh_interval: 60
