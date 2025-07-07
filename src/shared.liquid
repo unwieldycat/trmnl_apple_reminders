@@ -1,12 +1,11 @@
 {% assign dummy1 = webhook_url %}
 {% assign dummy2 = shortcut_url %}
+{% assign list_name = trmnl.plugin_settings.custom_fields_values.list_name %}
 
 {% template rlist %}
 {% for r in reminders %}
 <div class="item">
-  <div class="meta">
-    <span class="index">{{ r.idx }}</span>
-  </div>
+  <div class="meta"></div>
   <div class="content">
     <span class="title title--small">{{ r.title }}</span>
     {% if show_description %}
@@ -30,4 +29,16 @@
 <span class="title title--small">You're all caught up!</span>
 <span class="description">You have no upcoming reminders.</span>
 {% endif %}
+{% endtemplate %}
+
+{% template rlist_title %}
+<div class="title_bar">
+  <img class="image" src="https://github.com/Kristijan/trmnl_apple_reminders/blob/main/assets/icons8-apple-logo-30.png?raw=true">
+  <span class="title">{{ list_name }}</span>
+  {% if reminders.size == 1 %}
+  <span class="instance">{{ reminders.size }} item</span>
+  {% else %}
+  <span class="instance">{{ reminders.size }} items</span>
+  {% endif %}
+</div>
 {% endtemplate %}
