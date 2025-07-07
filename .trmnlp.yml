@@ -7,7 +7,9 @@ watch:
   - src
 
 # values of custom fields (defined in src/settings.yml)
-custom_fields: {}
+custom_fields: {
+  list_name: "Shopping List",
+}
 
 # override variables
 variables:
@@ -15,46 +17,101 @@ variables:
   reminders:
     - idx: 1
       date: ""
-      title: TRMNL Reminders Recipe
+      title: "Breakfast bars"
       num_tasks: 0
-      description: These are just example tasks
+      description: ""
     - idx: 2
       date: ""
-      title: Buy another TRMNL
+      title: "Cheese & Crackers"
       num_tasks: 0
-      description: "for unlimited focus, of course"
+      description: ""
     - idx: 3
       date: ""
-      title: Protest outside Apple Park
+      title: "Cherry tomatoes"
       num_tasks: 0
-      description: Shortcuts is excruciating to use
+      description: ""
     - idx: 4
-      date: "Today, 16:00"
-      title: Grab items from the store
-      num_tasks: 4
+      date: ""
+      title: "Dogfood"
+      num_tasks: 0
       description: ""
     - idx: 5
-      date: "Tomorrow, 12:00"
-      title: Walk the cat
+      date: ""
+      title: "Mini cucumbers"
       num_tasks: 0
       description: ""
     - idx: 6
-      date: "6/21/25, 00:00"
-      title: Water the plants
+      date: ""
+      title: "Peanut butter"
       num_tasks: 0
       description: ""
     - idx: 7
-      date: "6/21/25, 00:00"
-      title: Wash the car
+      date: ""
+      title: "Rice cups"
       num_tasks: 0
       description: ""
     - idx: 8
-      date: "6/29/25, 00:00"
-      title: Pay bills
+      date: ""
+      title: "Smoked almonds"
       num_tasks: 0
       description: ""
     - idx: 9
-      date: "7/14/25, 00:00"
-      title: Prepare for conference
+      date: ""
+      title: "Sweet chilli sauce"
       num_tasks: 0
-      description: Review slide deck and key points
+      description: ""
+    - idx: 10
+      date: ""
+      title: "Tuna"
+      num_tasks: 0
+      description: ""
+    - idx: 11
+      date: ""
+      title: "Yoghurt"
+      num_tasks: 0
+      description: ""
+    - idx: 12
+      date: ""
+      title: "Bananas"
+      num_tasks: 0
+      description: ""
+    - idx: 13
+      date: ""
+      title: "Milk"
+      num_tasks: 0
+      description: ""
+    - idx: 14
+      date: ""
+      title: "Eggs"
+      num_tasks: 0
+      description: ""
+    - idx: 15
+      date: ""
+      title: "Bread"
+      num_tasks: 0
+      description: ""
+    - idx: 16
+      date: ""
+      title: "Apples"
+      num_tasks: 0
+      description: ""
+    - idx: 17
+      date: ""
+      title: "Toilet paper"
+      num_tasks: 0
+      description: ""
+    - idx: 18
+      date: ""
+      title: "Pasta"
+      num_tasks: 0
+      description: ""
+    - idx: 19
+      date: ""
+      title: "Shampoo"
+      num_tasks: 0
+      description: ""
+    - idx: 20
+      date: ""
+      title: "Orange juice"
+      num_tasks: 0
+      description: ""

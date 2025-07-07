@@ -3,11 +3,9 @@
     data-list-limit="true"
     data-list-max-height="340"
     data-list-hidden-count="true"
-    data-list-max-columns="3">
+    data-list-max-columns="4">
     {% render "rlist", reminders: reminders, show_description: true %}
   </div>
 </div>
 
-<div class="title_bar">
-  <span class="title">Reminders</span>
-</div>
+{% render "rlist_title", reminders: reminders, list_name: list_name %}
