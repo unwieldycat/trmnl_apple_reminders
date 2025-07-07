@@ -35,10 +35,6 @@
 <div class="title_bar">
   <img class="image" src="https://github.com/Kristijan/trmnl_apple_reminders/blob/main/assets/icons8-apple-logo-30.png?raw=true">
   <span class="title">{{ list_name }}</span>
-  {% if reminders.size == 1 %}
-  <span class="instance">{{ reminders.size }} item</span>
-  {% else %}
-  <span class="instance">{{ reminders.size }} items</span>
-  {% endif %}
+  <span class="instance">{{ reminders.size }} {% if reminders.size == 1 %}item{% else %}items{% endif %}</span>
 </div>
 {% endtemplate %}
