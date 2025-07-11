@@ -9,9 +9,8 @@
   </div>
   <div class="content">
     <span class="title title--small">{{ r.title }}</span>
-    {% if show_description %}
+    {% if show_details %}
     <span class="description">{{r.description | truncate: 36}}</span>
-    {% endif %}
     <div class="flex gap--small">
       {% if r.date != "" %}
       <span class="label label--small label--underline">{{r.date}}</span>
@@ -23,6 +22,7 @@
       </span>
       {% endif %}
     </div>
+  {% endif %}
   </div>
 </div>
 {% endfor %}
