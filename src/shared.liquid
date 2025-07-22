@@ -1,8 +1,17 @@
+{% # Dummy assigns to make linter happy %}
 {% assign dummy1 = webhook_url %}
 {% assign dummy2 = shortcut_url %}
 
+{% comment %}
+Reminders list template
+  Parameters:
+  - reminders: Array of reminder objects
+  - show_details: Whether to show reminder details (e.g. description, date, subtasks)
+  - version: Version of the reminders data
+{% endcomment %}
 {% template rlist %}
 
+{% # Validate shortcut version %}
 {% if version != 2 %}
 {% assign reminders = null %}
 {% if version == null %}
@@ -12,18 +21,21 @@
 <span class="description">Recieved version {{ version }} data, expected version 2</span>
 {% endif %}
 
+{% # Reminder items %}
 {% for r in reminders %}
 <div class="item">
   <div class="meta">
     <span class="index">{{ r.idx }}</span>
   </div>
   <div class="content">
-    <span class="title title--small">{{ r.title }}</span>
+    <span class="title title--small">{{- r.title -}}</span>
+
+    {% # Reminder details %}
     {% if show_details %}
-    <span class="description">{{r.description | truncate: 36}}</span>
+    <span class="description">{{- r.description | truncate: 36 -}}</span>
     <div class="flex gap--small">
       {% if r.date != "" %}
-      <span class="label label--small label--underline">{{r.date}}</span>
+      <span class="label label--small label--underline">{{- r.date -}}</span>
       {% endif %}
       {% if r.num_tasks > 0 %}
       {% assign label = r.num_tasks == 1 | default: false %}
@@ -32,16 +44,25 @@
       </span>
       {% endif %}
     </div>
-  {% endif %}
+    {% endif %}
+
   </div>
 </div>
 {% endfor %}
+
+{% # If no reminders, display a message %}
 {% if reminders.size == 0 %}
 <span class="title title--small">You're all caught up!</span>
 <span class="description">You have no upcoming reminders.</span>
 {% endif %}
 {% endtemplate %}
 
+{% comment %}
+Titlebar template
+  Parameters:
+  - list_name: Name of the reminders list
+  - render_time: Time when the list was rendered
+{% endcomment %}
 {% template titlebar %}
 <div class="title_bar">
   <img class="image" src="https://github.com/unwieldycat/trmnl_apple_reminders/blob/main/assets/list-ul-solid-full.svg?raw=true" />
