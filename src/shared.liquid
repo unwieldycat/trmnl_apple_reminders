@@ -61,12 +61,12 @@ Reminders list template
 Titlebar template
   Parameters:
   - list_name: Name of the reminders list
-  - render_time: Time when the list was rendered
+  - data_time: Time when the data was generated
 {% endcomment %}
 {% template titlebar %}
 <div class="title_bar">
   <img class="image" src="https://github.com/unwieldycat/trmnl_apple_reminders/blob/main/assets/list-ul-solid-full.svg?raw=true" />
   <span class="title">Reminders</span>
-  <span class="instance">{{ list_name }} @ {{ render_time }}</span>
+  <span class="instance">{{ list_name }} @ {{ data_time }}</span>
 </div>
 {% endtemplate %}
