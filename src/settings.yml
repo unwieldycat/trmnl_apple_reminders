@@ -6,6 +6,7 @@ static_data: ''
 polling_verb: get
 polling_url: ''
 polling_headers: ''
+polling_body: ''
 id: 79716
 custom_fields:
 - keyname: doesnt_matter
@@ -21,7 +22,7 @@ custom_fields:
 - keyname: shortcut_url
   field_type: copyable
   name: Shortcut URL
-  value: https://www.icloud.com/shortcuts/3e31e647e2bb45cfb5113ed9cf69c701
+  value: https://www.icloud.com/shortcuts/377c298b77034f5485e3750c7693c79d
   description: Add this shortcut to your Apple device. Read the comments to configure.
 name: Apple Shortcuts Reminders
 refresh_interval: 60
