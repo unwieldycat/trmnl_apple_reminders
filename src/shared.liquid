@@ -2,6 +2,16 @@
 {% assign dummy2 = shortcut_url %}
 
 {% template rlist %}
+
+{% if version != 2 %}
+{% assign reminders = null %}
+{% if version == null %}
+  {% assign version = 1 %}
+{% endif %}
+<span class="title title--small">Shortcut Version Mismatch</span>
+<span class="description">Recieved version {{ version }} data, expected version 2</span>
+{% endif %}
+
 {% for r in reminders %}
 <div class="item">
   <div class="meta">
