@@ -1,13 +1,11 @@
 <div class="layout">
-  <div class="column" 
+  <div class="column"
     data-list-limit="true"
-    data-list-max-height="340"
+    data-list-max-height="360"
     data-list-hidden-count="true"
     data-list-max-columns="3">
-    {% render "rlist", reminders: reminders, show_description: true %}
+    {% render "rlist", reminders: reminders, show_details: true, version: version %}
   </div>
 </div>
 
-<div class="title_bar">
-  <span class="title">Reminders</span>
-</div>
+{% render "titlebar", list_name: list_name, data_time: data_time %}
