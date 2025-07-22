@@ -31,3 +31,11 @@
 <span class="description">You have no upcoming reminders.</span>
 {% endif %}
 {% endtemplate %}
+
+{% template titlebar %}
+<div class="title_bar">
+  <img class="image" src="https://github.com/unwieldycat/trmnl_apple_reminders/blob/main/assets/list-ul-solid-full.svg?raw=true" />
+  <span class="title">Reminders</span>
+  <span class="instance">{{ list_name }} @ {{ render_time }}</span>
+</div>
+{% endtemplate %}
