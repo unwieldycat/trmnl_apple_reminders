@@ -20,17 +20,17 @@ variables:
       date: ""
       title: TRMNL Reminders Recipe
       num_tasks: 0
-      description: These are just example tasks
+      description: Stay on top of your Apple Reminders
     - idx: 2
-      date: ""
-      title: Buy another TRMNL
+      title: Now on version 2
+      date: "7/23/25, 00:00"
       num_tasks: 0
-      description: "for unlimited focus, of course"
+      description: With better layouts and more details
     - idx: 3
       date: ""
-      title: Protest outside Apple Park
+      title: Below are example reminders
       num_tasks: 0
-      description: Shortcuts is excruciating to use
+      description: for the recipe thumbnail
     - idx: 4
       date: "Today, 16:00"
       title: Grab items from the store
@@ -42,10 +42,10 @@ variables:
       num_tasks: 0
       description: ""
     - idx: 6
-      date: "6/21/25, 00:00"
-      title: Water the plants
-      num_tasks: 0
-      description: ""
+      date: "6/21/25, 18:30"
+      title: Do a large task
+      num_tasks: 8
+      description: "This task has many details, including a long description that should get truncated"
     - idx: 7
       date: "6/21/25, 00:00"
       title: Wash the car
