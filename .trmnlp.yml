@@ -12,6 +12,9 @@ custom_fields: {}
 # override variables
 variables:
   trmnl: {}
+  version: 2
+  render_time: "7:35 AM"
+  list_name: "Reminders"
   reminders:
     - idx: 1
       date: ""
