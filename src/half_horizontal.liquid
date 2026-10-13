@@ -1,10 +1,8 @@
-<div class="layout">
-  <div class="column"
-    data-list-limit="true"
-    data-list-max-height="170"
-    data-list-hidden-count="true"
-    data-list-max-columns="3">
-    {% render "rlist", reminders: reminders, show_details: true, version: version %}
+<div class="layout layout--row layout--left layout--center lg:p--10">
+  <div class="columns" data-overflow-cols="2" data-overflow="true" data-overflow-counter="true">
+    <div class="column">
+      {% render "rlist", reminders: reminders, show_details: true, version: version %}
+    </div>
   </div>
 </div>
 

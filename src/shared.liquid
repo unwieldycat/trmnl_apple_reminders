@@ -17,8 +17,8 @@ Reminders list template
 {% if version == null %}
   {% assign version = 1 %}
 {% endif %}
-<span class="title title--small">Shortcut Version Mismatch</span>
-<span class="description">Recieved version {{ version }} data, expected version 2</span>
+<span class="title title--small lg:title--base">Shortcut Version Mismatch</span>
+<span class="description lg:description--large">Recieved version {{ version }} data, expected version 2</span>
 {% endif %}
 
 {% # Reminder items %}
@@ -28,18 +28,18 @@ Reminders list template
     <span class="index">{{ r.idx }}</span>
   </div>
   <div class="content">
-    <span class="title title--small">{{- r.title -}}</span>
+    <span class="title title--small lg:title--base">{{- r.title -}}</span>
 
     {% # Reminder details %}
     {% if show_details %}
     <span class="description">{{- r.description | truncate: 36 -}}</span>
     <div class="flex gap--small">
       {% if r.date != "" %}
-      <span class="label label--small label--underline">{{- r.date -}}</span>
+      <span class="label label--small lg:label--base label--underline">{{- r.date -}}</span>
       {% endif %}
       {% if r.num_tasks > 0 %}
       {% assign label = r.num_tasks == 1 | default: false %}
-      <span class="label label--small label--underline">
+      <span class="label label--small lg:label--base label--underline">
         {{ r.num_tasks }} {% if r.num_tasks == 1 %}Subtask{% else %}Subtasks{% endif %}
       </span>
       {% endif %}
@@ -52,8 +52,8 @@ Reminders list template
 
 {% # If no reminders, display a message %}
 {% if reminders.size == 0 %}
-<span class="title title--small">You're all caught up!</span>
-<span class="description">You have no upcoming reminders.</span>
+<span class="title title--small lg:title--base">You're all caught up!</span>
+<span class="description lg:description--large">You have no upcoming reminders.</span>
 {% endif %}
 {% endtemplate %}
 

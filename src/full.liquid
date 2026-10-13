@@ -1,10 +1,24 @@
-<div class="layout">
-  <div class="column"
-    data-list-limit="true"
-    data-list-max-height="360"
-    data-list-hidden-count="true"
-    data-list-max-columns="3">
-    {% render "rlist", reminders: reminders, show_details: true, version: version %}
+<div class="layout layout--row layout--left layout--center lg:p--10">
+  <div class="columns" data-overflow-cols="3" data-overflow="true" data-overflow-counter="true">
+    <div class="column">
+      {% render "rlist", reminders: reminders, show_details: true, version: version %}
+    </div>
+  </div>
+  <div class="hidden sm:hidden md:hidden lg:flex flex--col gap--medium">
+    <div class="item w--36">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--medium">{{ reminders.size }}</span>
+        <span class="label">Reminders</span> 
+      </div>
+    </div>
+    <div class="item w--36">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--small">{{ data_time }}</span>
+        <span class="label">Last Refresh</span> 
+      </div>
+    </div>
   </div>
 </div>
 
